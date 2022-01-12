@@ -1,0 +1,17 @@
+package com.LinkedInApp;
+//Role to send E-mail
+public class director extends chainelement {
+	
+	public director(int level)
+	{
+		this.level = level;
+	}
+
+	protected void sendEmail(String message)
+	{
+		System.out.print("Email sent to CEO. Message: ");
+		System.out.println(message);
+
+	}
+
+}
