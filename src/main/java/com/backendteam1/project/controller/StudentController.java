@@ -24,7 +24,7 @@ public class StudentController {
 	
 	//REST API
 	
-	@PostMapping()
+	@PostMapping("/create")
 	public ResponseEntity<Student> saveStudent(@RequestBody Student student){
 		
 		return new ResponseEntity<Student>(studentService.saveStudent(student), HttpStatus.CREATED);
