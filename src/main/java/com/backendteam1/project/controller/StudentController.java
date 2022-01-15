@@ -46,16 +46,24 @@ public class StudentController {
 	
 	//Retrieve specific student by name ("/search_by_name) return a list of students
 	
+
 	//Retrieve specific students by id ("/search_by_id)
+	//Implemented by Aditya
 	
+
+
 	//Delete specific student by id ("/delete")
 	
 	
 	
 	//Update specific student data by id ("/update")
 	
+
+	
 	//Sort student by first name ("/sort") return a list of student in ascending order
 	
+
+
 	//Sort students by first name and return only specific number of objects ("/sort?5") user will pass one integer, return list of students
 	
 	
