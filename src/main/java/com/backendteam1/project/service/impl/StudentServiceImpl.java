@@ -62,5 +62,16 @@ public class StudentServiceImpl implements StudentService{
 	public Student getStudentByName(String name){
 		return studentRepository.findByFirstName(name);
 	}
+	
+	@Override
+	public Student updateStudentDetails(Student student)
+	{
+		Student existingStudent=studentRepository.findById(student.getId()).orElse(null);
+		existingStudent.setFirstName(student.getFirstName());
+		existingStudent.setLastName(student.getLastName());
+		existingStudent.setEmail(student.getEmail());
+		existingStudent.setContactNumber(student.getContactNumber());
+		return studentRepository.save(existingStudent);
+	}
 
 }
