@@ -87,6 +87,17 @@ public class StudentController {
 	//Sort student by first name ("/sort") return a list of student in ascending order
 	// implemented by Jai
 	
+	@GetMapping("/sort")
+	public List<Student> sorted_list()
+	{
+		
+		List<Student> sorted_students =  studentService.getSortedStudents();
+
+		return sorted_students;
+
+
+	}
+	
 
 
 	//Sort students by first name and return only specific number of objects ("/sort?5") user will pass one integer, return list of students
