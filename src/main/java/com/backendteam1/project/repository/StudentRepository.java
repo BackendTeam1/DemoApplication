@@ -10,6 +10,6 @@ import com.backendteam1.project.model.Student;
 
 public interface StudentRepository extends JpaRepository<Student, Long> {
 	
-	
+	Student findByFirstName(String name);
 
 }
