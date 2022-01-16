@@ -76,9 +76,9 @@ public class StudentController {
 	//Update specific student data by id ("/update")
 	//Implemented by Agna
 	@PutMapping("/update")
-	public Student updatestudent(@RequestBody Student student)
+	public Student updateStudent(@RequestBody Student student)
 	{
-		return studentService.updateStudent(student);
+		return studentService.updateStudentDetails(student);
 	}
 
 	
