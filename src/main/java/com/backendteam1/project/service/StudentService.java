@@ -9,5 +9,8 @@ public interface StudentService {
 	Student saveStudent(Student student);
 	
 	List<Student> getAllStudents();
-
+	
+	String deleteStudentById(long id);
+	
+	List<Student> getSortedStudents();
 }
