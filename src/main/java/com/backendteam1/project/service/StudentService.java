@@ -18,5 +18,5 @@ public interface StudentService {
 	
 	Student getStudentByName(String name);
 	
-	Student updateStudentDetails(Student student);
+	Student updateStudentDetails(Student student, long id);
 }
