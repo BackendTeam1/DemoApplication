@@ -75,6 +75,11 @@ public class StudentController {
 	
 	//Update specific student data by id ("/update")
 	//Implemented by Agna
+	@PutMapping("/update")
+	public Student updatestudent(@RequestBody Student student)
+	{
+		return studentService.updateStudent(student);
+	}
 
 	
 	//Sort student by first name ("/sort") return a list of student in ascending order
