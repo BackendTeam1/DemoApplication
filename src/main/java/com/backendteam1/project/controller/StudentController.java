@@ -78,10 +78,10 @@ public class StudentController {
 	
 	//Update specific student data by id ("/update")
 	//Implemented by Agna
-	@PutMapping("/update")
-	public Student updateStudent(@RequestBody Student student)
+	@PutMapping("/update/{id}")
+	public Student updateStudent(@RequestBody Student student, @PathVariable long id)
 	{
-		return studentService.updateStudentDetails(student);
+		return studentService.updateStudentDetails(student, id);
 	}
 
 	
