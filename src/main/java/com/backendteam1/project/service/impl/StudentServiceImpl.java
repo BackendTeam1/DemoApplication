@@ -52,6 +52,11 @@ public class StudentServiceImpl implements StudentService{
 	{	
 		return studentRepository.findAll(Sort.by(Sort.Direction.ASC,"firstName"));
 	}
+	
+	@Override
+	public Student getStudentById(long id){
+		return studentRepository.findById(id).get();
+	}
 
 
 }
