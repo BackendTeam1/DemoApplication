@@ -49,6 +49,11 @@ public class StudentController {
 
 	//Retrieve specific students by id ("/search_by_id)
 	//Implemented by Aditya
+	@GetMapping(value = "/search_by_id/{id}")
+	public Student getStudent(@PathVariable long id)
+	{
+		return studentService.getStudentById(id);
+	}
 	
 
 
