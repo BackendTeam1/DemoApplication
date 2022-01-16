@@ -38,5 +38,20 @@ public class StudentServiceImpl implements StudentService{
 	}
 	
 	
+	@Override
+	public String deleteStudentById(long id)
+	{
+		studentRepository.deleteById(id);
+		return "Student with id: "+ Long.toString(id) +" removed successfully";
+	}
+
+
+
+	@Override
+	public List<Student> getSortedStudents() 
+	{	
+		return studentRepository.findAll(Sort.by(Sort.Direction.ASC,"firstName"));
+	}
+
 
 }
