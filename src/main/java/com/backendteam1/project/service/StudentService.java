@@ -15,4 +15,6 @@ public interface StudentService {
 	List<Student> getSortedStudents();
 	
 	Student getStudentById(long id);
+	
+	Student getStudentByName(String name);
 }
