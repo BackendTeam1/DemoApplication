@@ -52,9 +52,13 @@ public class StudentController {
 	
 
 
-	//Delete specific student by id ("/delete")
-	//Implemented by Kushal Sharma
-	
+	//Delete specific student by id ("/delete") 
+	//Implemented by : Kushal Sharma
+	@DeleteMapping("/delete/{id}")
+	public String Delete(@PathVariable long id)
+	{
+		return studentService.deleteStudentById(id);
+	}
 	
 	
 	//Update specific student data by id ("/update")
@@ -68,7 +72,19 @@ public class StudentController {
 
 	//Sort students by first name and return only specific number of objects ("/sort?5") user will pass one integer, return list of students
 	//Implemented by Kushal Sharma
-	
-	
-
+	@GetMapping("/sort/{noOfStudents}")
+	public List<Student> students_Sorted(@PathVariable int noOfStudents)
+	{			
+		List<Student> finalList = new ArrayList<>();
+		List<Student> sortedList = studentService.getSortedStudents();
+		int count = 0;
+		for(Student student: sortedList)
+		{
+			finalList.add(student);
+			count++;
+			if(count==noOfStudents)
+				break;
+		}
+		return finalList;
+	}
 }
