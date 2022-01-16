@@ -46,6 +46,12 @@ public class StudentController {
 	
 	
 	//Retrieve specific student by name ("/search_by_name) return a list of students
+	//Implemented by Aditya
+	@GetMapping(value = "/search_by_name/{first_name}")
+	public Student getStudent(@PathVariable String first_name)
+	{
+		return studentService.getStudentByName(first_name);
+	}
 	
 
 	//Retrieve specific students by id ("/search_by_id)
