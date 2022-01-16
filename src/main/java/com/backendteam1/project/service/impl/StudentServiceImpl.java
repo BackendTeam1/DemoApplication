@@ -58,5 +58,9 @@ public class StudentServiceImpl implements StudentService{
 		return studentRepository.findById(id).get();
 	}
 
+	@Override
+	public Student getStudentByName(String name){
+		return studentRepository.findByFirstName(name);
+	}
 
 }
